@@ -1,0 +1,31 @@
+{
+  "name": "twitter-bot",
+  "version": "1.0.0",
+  "description": "A NPL bot to spread positiveness! Create by undergraduate students to explore artificial intelligence concepts.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adeilsonsilva/twitter-bot.git"
+  },
+  "keywords": [
+    "natural-language processing",
+    "artificial inteligence",
+    "twitter",
+    "javascript"
+  ],
+  "author": "Adeilson Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adeilsonsilva/twitter-bot/issues"
+  },
+  "homepage": "https://github.com/adeilsonsilva/twitter-bot#readme",
+  "dependencies": {
+    "brain.js": "^1.0.4",
+    "dotenv": "^5.0.0",
+    "twit": "^2.2.9"
+  }
+}
