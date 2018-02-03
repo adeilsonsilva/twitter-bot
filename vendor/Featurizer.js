@@ -44,7 +44,6 @@ export default class Featurizer {
     static async featurizeFromArray (content, combined) {
         const tokens = typeof content === 'string' ?  await stem(content) : content;
 
-        console.log(combined);
         return combined.map(current =>
             tokens.indexOf(current) === -1 ? 0 : 1
         );

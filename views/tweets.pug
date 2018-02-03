@@ -1,0 +1,35 @@
+doctype html
+html
+    head
+        style
+            include ../node_modules/gaintime/css/gaintime.min.css
+        title=title
+    body
+        header(class="gt-top-menu fixed xs-left")
+            nav
+                ul
+                    a(href="/")
+                        li Início
+                    a(href="/tweets")
+                        li Twitter
+        section(class="first text-center")
+            h1=message
+            div(class="flex-box")
+                form(class="gt-form", action="/tweets", method="post")
+                    label(for="hashtag") Hashtag
+                    input(type="text", name="hashtag", id="hashtag")
+                    button(class="btn success") Buscar!
+        section(class="text-center")
+            div(class="flex-box")
+                table(class="gt-table")
+                    thead
+                        tr
+                            th Usuário
+                            th Tweet
+                            th Resultado
+                    tbody(class="text-center")
+                        each result in results
+                            tr
+                                td=result.user
+                                td=result.text
+                                td=result.result

@@ -37,11 +37,11 @@ export default class NLP {
 
     async classifyFromLoad (text) {
         var feature = await DataHandler.featurizeFromArray(text);
-        console.log(this.net.run(feature));
+        return this.net.run(feature);
     }
 
     classify (text) {
         var feature = this.dataHandler.featurize(text);
-        console.log(this.net.run(feature));
+        return this.net.run(feature);
     }
 }

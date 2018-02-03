@@ -2,6 +2,7 @@ import Dotenv from 'dotenv';
 import Twit from 'twit';
 
 export default class Twitter {
+
     constructor () {
         Dotenv.load();
         this.T = new Twit({
@@ -16,11 +17,15 @@ export default class Twitter {
     /**
      * Get latest tweet from hashtag
      */
-    getTweets (hashtag) {
-        this.T.get('search/tweets', { q: hashtag, count: 10 }, function(err, data, response) {
+    async getTweets (hashtag) {
+        var results = [];
+
+        await this.T.get('search/tweets', { q: hashtag, count: 10 }, function(err, data, response) {
             data["statuses"].map(function(tweet) {
-                console.log(tweet.text);
+                results.push({user: tweet.user.name, text: tweet.text});
             });
         })
+
+        return results;
     }
 }

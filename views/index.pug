@@ -1,0 +1,24 @@
+doctype html
+html
+    head
+        style
+            include ../node_modules/gaintime/css/gaintime.min.css
+        title=title
+    body
+        header(class="gt-top-menu fixed xs-left")
+            nav
+                ul
+                    a(href="/")
+                        li Início
+                    a(href="/tweets")
+                        li Twitter
+        section(class="first text-center")
+            h1=message
+            div(class="flex-box")
+                div(class="col")
+                    form(class="gt-form", action="/", method="post")
+                        label(for="text") Texto
+                        input(type="text", name="text", id="text")
+                        button(class="btn success") Enviar!
+                div(class="col")
+                    h2=result
