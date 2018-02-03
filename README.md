@@ -6,6 +6,13 @@ A NLP bot to spread positiveness! Create by undergraduate students to explore ar
 - [Adeilson Silva](https://github.com/adeilsonsilva)
 - [Charles Ferreira](https://github.com/charlesdccti)
 
+## Database
+- [Twitter sentiment analysis](https://www.kaggle.com/c/twitter-sentiment-analysis2/data)
+
+## Resources
+- [Natural Language Processing and Machine Learning in JavaScript](https://medium.com/@daffl/natural-language-processing-and-machine-learning-in-javascript-249181a3b721)
+- [How to Use Twitter API With Node.js](https://dzone.com/articles/how-to-use-twitter-api-using-nodejs)
+
 ## Tools
 
 - [Node.js](https://nodejs.org/en/)

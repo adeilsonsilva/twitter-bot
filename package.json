@@ -4,7 +4,8 @@
   "description": "A NPL bot to spread positiveness! Create by undergraduate students to explore artificial intelligence concepts.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "npm run build && node --use_strict dist/index.js",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --source-maps --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,7 +26,15 @@
   "homepage": "https://github.com/adeilsonsilva/twitter-bot#readme",
   "dependencies": {
     "brain.js": "^1.0.4",
+    "csvtojson": "^1.1.9",
     "dotenv": "^5.0.0",
+    "lodash": "^4.17.4",
+    "natural": "^0.5.6",
     "twit": "^2.2.9"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "rimraf": "^2.6.2"
   }
 }
