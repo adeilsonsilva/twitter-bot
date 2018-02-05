@@ -5,7 +5,7 @@ html
             include ../node_modules/gaintime/css/gaintime.min.css
         title=title
     body
-        header(class="gt-top-menu fixed xs-left")
+        header(class="gt-top-menu xs-left")
             nav
                 ul
                     a(href="/")
@@ -21,4 +21,25 @@ html
                         input(type="text", name="text", id="text")
                         button(class="btn success") Enviar!
                 div(class="col")
-                    h2=result
+                    if aux.positivo
+                        div(class="inform success")
+                            h2 Obrigado pela positividade!
+                    else if aux.negativo
+                        div(class="inform danger")
+                            h2 Vissh!
+                    else
+                        div(class="inform")
+                            h2 Não tem frase nenhuma aí. '-'
+
+                    table(class="gt-table")
+                        thead
+                            tr
+                                th Class
+                                th Percentage
+                        tbody(class="text-center")
+                            tr
+                                td Positive
+                                td=result.positivo
+                            tr
+                                td Negative
+                                td=result.negativo

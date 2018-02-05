@@ -4,8 +4,8 @@ html
         style
             include ../node_modules/gaintime/css/gaintime.min.css
         title=title
-    body
-        header(class="gt-top-menu fixed xs-left")
+    body(class="panel ")
+        header(class="gt-top-menu xs-left")
             nav
                 ul
                     a(href="/")
@@ -26,10 +26,25 @@ html
                         tr
                             th Usuário
                             th Tweet
-                            th Resultado
+                            th Positivo (%)
+                            th Negativo (%)
                     tbody(class="text-center")
                         each result in results
-                            tr
-                                td=result.user
-                                td=result.text
-                                td=result.result
+                            if result.positivo
+                                tr(class="success")
+                                    td=result.user
+                                    td=result.text
+                                    td=result.result.positivo
+                                    td=result.result.negativo
+                            else if result.negativo
+                                tr(class="danger")
+                                    td=result.user
+                                    td=result.text
+                                    td=result.result.positivo
+                                    td=result.result.negativo
+                            else
+                                tr
+                                    td=result.user
+                                    td=result.text
+                                    td=result.result.positivo
+                                    td=result.result.negativo

@@ -16,8 +16,9 @@ A NLP bot to spread positiveness! Create by undergraduate students to explore ar
 ## Tools
 
 - [Node.js](https://nodejs.org/en/)
-- [twit](https://github.com/ttezel/twit)
 - [Brain.js](https://github.com/BrainJS/brain.js)
+- [twit](https://github.com/ttezel/twit)
+- [GainTime](https://gaintime.github.io/)
 
 ## How to run
 
